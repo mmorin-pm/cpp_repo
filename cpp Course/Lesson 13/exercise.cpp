@@ -2,6 +2,13 @@
 #include <string>
 #include <vector>
 #include "movies.h"
+//Note using the VSCode task to compile this will fail
+//The implementation of the movie and movies class is in their own cpp file
+//The task will only compile the exercise.cpp and not the others needed
+//This will give an Undefined Reference to the class methods when they are called
+//To compile this you need to compile all the file in the terminal like this
+//g++ exercise.cpp movies.cpp movie.cpp -o exercise.exe
+
 
 // Function prototypes
 void increment_watched(Movies &movies, std::string name);
