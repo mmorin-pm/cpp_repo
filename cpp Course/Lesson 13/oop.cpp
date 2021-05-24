@@ -6,7 +6,7 @@
 using namespace std; //Note that this is not always a good idea to use all of std
 
 int main(){
-    Player marcy; // name has a default initializer so its good       
+    Player marcy {"Marcel"};      
     // Because these are private we can't access them here
     // marcy.name = "Marcel";
     // marcy.health = 99;
@@ -61,6 +61,7 @@ Player::~Player(){
 };
 
 Player::Player(const Player &source) : name{source.name}, health{source.health}, xp{source.xp}{
+    // can also delegate constructor : Player {source.name, source.health, source.xp}{
     cout << "Copying object: " << name << endl;
 };
 
