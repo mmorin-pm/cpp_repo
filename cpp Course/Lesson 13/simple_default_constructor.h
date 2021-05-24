@@ -10,11 +10,8 @@ private: //These will not be accessible to someone using the Player class
     int health;
 
 public:
-    Player(); // no args contructor
-    Player(std::string _name); //As soon as we define a construction cpp does not give us a free no args construction anymore so we have to define that if we want it
-    Player(std::string _name, int health);
+    Player(std::string _name = "<no_name>", int health = 100, int xp = 0);
     ~Player(); // only destructor allowed per class (Can't be overloaded)
-    Player(const Player &source); //Declaring Copy Constructor
     int xp;
     //methods (functions definition)
     void change_health(int change);
