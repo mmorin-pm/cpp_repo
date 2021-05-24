@@ -1,6 +1,10 @@
 #include <iostream>
 #include "movies.h"
 
+Movies::Movies() {
+};
+Movies::~Movies() {
+};
 void Movies::display() const{
     for(auto movie: list)
         cout << movie.get_name() << ", ";
