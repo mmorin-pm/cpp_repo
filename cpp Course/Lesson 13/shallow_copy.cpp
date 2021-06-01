@@ -7,9 +7,9 @@ int main(){
 
     Shallow obj1 {100};
     std::cout << *obj1.data << std::endl;
-    display_shallow(obj1);
+    display_shallow(obj1); // As we leave this scope the pointer is also released but we still need it
 
-    std::cout << *obj1.data << std::endl;
+    std::cout << *obj1.data << std::endl; // This is display released memory/garbage
 
     return 0;
 }
